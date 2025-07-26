@@ -48,4 +48,4 @@ This portfolio was created to highlight my professional background, skills, and 
 **Dejenie Derese Mitiku**  
 Software Developer | Backend Engineer | Spring Boot | React | Django  
 📧 soamisodoi012@gmail.com
-🌐 [LinkedIn](https://www.linkedin.com/in/dejenie-derese) (replace with your actual link)
+🌐 [LinkedIn](https://www.linkedin.com/in/dejenie-derese)
