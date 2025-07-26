@@ -36,40 +36,115 @@
         </ul>
     </section>
 
-    <section class="skills container">
-        <h2>Skills</h2>
-        <div class="btn-group" role="group">
-            <button class="btn btn-outline-primary" onclick="showSkillCategory('programming')">Programming Skills</button>
-            <button class="btn btn-outline-primary" onclick="showSkillCategory('frameworks')">Frameworks, Databases and middleware</button>
-        </div>
+    <section class="skills container my-5">
+    <h2 class="text-center mb-4">Skills</h2>
+    
+    <div class="btn-group mb-4 d-flex justify-content-center" role="group">
+        <button class="btn btn-outline-primary" onclick="showSkillCategory('programming')">Programming Skills</button>
+        <button class="btn btn-outline-primary" onclick="showSkillCategory('frameworks')">Frameworks, Databases, and Middleware</button>
+    </div>
 
-        <div id="programming" class="skill-category">
-            <h4>Programming Languages and sdlc</h4>
-            <ul>
-                <li><i class="fab fa-html5"></i>HTML</li>
-                <li><i class="fab fa-css3-alt"></i>CSS</li>
-                <li><i class="fab fa-js"></i>JavaScript</li>
-                <li><i class="fab fa-java"></i>Java</li>
-                <li><i class="fab fa-python"></i>Python</li>
-                <li><i class="fas fa-cogs"></i> Agile Software Development</li>
-            </ul>
+    <!-- Programming Skills -->
+    <div id="programming" class="skill-category">
+        <h4>Programming Languages & SDLC</h4>
+        <div class="mb-3">
+            <label>HTML</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 95%;">95%</div>
+            </div>
         </div>
+        <div class="mb-3">
+            <label>CSS</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>JavaScript</label>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Java</label>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Python</label>
+            <div class="progress">
+                <div class="progress-bar bg-secondary" style="width: 75%;">75%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Agile Software Development</label>
+            <div class="progress">
+                <div class="progress-bar bg-dark" style="width: 85%;">85%</div>
+            </div>
+        </div>
+    </div>
 
-        <div id="frameworks" class="skill-category">
-            <h4> Frameworks, Databases and middleware</h4>
-            <ul>
-                <li><i class="fab fa-django"></i>Django</li>
-                <li><i class="fab fa-node"></i>Express</li>
-                <li><i class="fab fa-java"></i>Spring Boot</li>
-                <li><i class="fab fa-js-square"></i> Next.js</li>
-                <li><i class="fab fa-react"></i> React</li>
-                <li><i class="fab fa-java"></i> WSO2 (ESB)</li>
-                <li><i class="fas fa-database"></i>MongoDB</li>
-                <li><i class="fas fa-database"></i>PostgreSQL</li>
-                <li><i class="fas fa-database"></i>MySQL</li>
-            </ul>
+    <!-- Frameworks, DBs, Middleware -->
+    <div id="frameworks" class="skill-category" style="display: none;">
+        <h4>Frameworks, Databases & Middleware</h4>
+        <div class="mb-3">
+            <label>Django</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+            </div>
         </div>
-    </section>
+        <div class="mb-3">
+            <label>Express.js</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Spring Boot</label>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Next.js</label>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 70%;">70%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>React</label>
+            <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>WSO2 (ESB)</label>
+            <div class="progress">
+                <div class="progress-bar bg-secondary" style="width: 75%;">75%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>MongoDB</label>
+            <div class="progress">
+                <div class="progress-bar bg-dark" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>PostgreSQL</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>MySQL</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 80%;">80%</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section class="experience container">
         <h2>Experience a</h2>
