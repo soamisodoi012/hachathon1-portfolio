@@ -17,3 +17,33 @@ function showSkillCategory(category) {
 document.addEventListener('DOMContentLoaded', () => {
   showSkillCategory('programming');
 });
+const text = "Hi there!";
+const typewriterElement = document.getElementById("typewriter");
+let index = 0;
+let deleting = false;
+
+function typeEffect() {
+  if (!deleting) {
+    typewriterElement.textContent = text.substring(0, index + 1);
+    index++;
+    if (index === text.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1000); // pause before deleting
+      return;
+    }
+  } else {
+    typewriterElement.textContent = text.substring(0, index - 1);
+    index--;
+    if (index === 0) {
+      deleting = false;
+      setTimeout(typeEffect, 500); // pause before typing again
+      return;
+    }
+  }
+
+  setTimeout(typeEffect, 150);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});
