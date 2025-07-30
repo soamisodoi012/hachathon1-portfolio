@@ -10,9 +10,10 @@ body {
 
 /* === Header/Navbar === */
 header {
-    background-color: #0c161f;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #0c161f; /* dark navy */
+    color: #fff; /* white text */
+    padding: 60px 0; /* more vertical padding */
+    text-align: center;
 }
 
 nav {
@@ -35,10 +36,16 @@ nav a:hover {
 }
 
 header h1 {
-    margin: 0;
-    text-align: center;
+    margin: 0 0 10px 0; /* some space below */
+    font-size: 3rem; /* bigger font */
+    font-weight: 700; /* bold */
+    line-height: 1.2;
 }
-
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #a0aec0; /* lighter gray for subtitle */
+}
 /* === Profile Section === */
 .profile {
     padding: 30px 0;
