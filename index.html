@@ -2,250 +2,174 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header class="text-center">
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <p>Welcome to my portfolio website!</p>
-        </div>
-    </header>
+  <!-- Navbar -->
+  <nav>
+    <a href="#profile">Profile</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section class="profile">
-        <img src="assets/djd.jpg" alt="Profile Picture">
-         <!-- about me -->
-        <h2>Dejenie Derese Mitiku</h2>
-        <p>hi there!,i am  Backend developer with a strong foundation in programming,frameworks, and middleware With expertise in various programming languages and a deep understanding of software development principles, i have has a proven ability to design, develop, and deploy high-quality products. i am  proficient in working with different frameworks, allowing  to build robust and scalable solutions across a wide range of platforms. my commitment to continuous learning and staying up to date with the latest technologies further enhances my development capabilities, enabling me to tackle complex challenges effectively</p>
+  <!-- Header -->
+  <header class="text-center">
+    <div class="container">
+      <h1>My Portfolio</h1>
+      <p>Welcome to my portfolio website!</p>
+    </div>
+  </header>
+
+  <!-- Profile / About Section -->
+  <section id="profile" class="profile">
+    <img src="assets/djd.jpg" alt="Profile Picture" />
+    <h2>Dejenie Derese Mitiku</h2>
+    <p>
+      Hi there! I am a Backend developer with a strong foundation in
+      programming, frameworks, and middleware. With expertise in various
+      programming languages and a deep understanding of software development
+      principles, I have a proven ability to design, develop, and deploy
+      high-quality products.
+    </p>
     <div class="text-center mt-3">
-        <a href="assets/dejenie-derese-cv.pdf" class="btn btn-success" download>
-            <i class="fas fa-download"></i> Download My CV
-        </a>
+      <a href="assets/dejenie-derese-cv.pdf" class="btn btn-success" download>
+        <i class="fas fa-download"></i> Download My CV
+      </a>
     </div>
-    </section>
- <!-- education -->
-    <section class="education container">
-        <h2>Education</h2>
-        <ul>
-            <li>Bachelor of Science in Information Technology - Woldia University </li>
-        </ul>
-    </section>
+  </section>
 
-   <section class="skills container my-5">
-  <h2 class="text-center mb-4">Skills</h2>
+  <!-- Education -->
+  <section id="education" class="education container">
+    <h2>Education</h2>
+    <ul>
+      <li>Bachelor of Science in Information Technology - Woldia University</li>
+    </ul>
+  </section>
 
-  <div class="btn-group mb-4 d-flex justify-content-center" role="group">
-    <button class="btn btn-outline-primary" onclick="showSkillCategory('programming')">Programming Skills</button>
-    <button class="btn btn-outline-primary" onclick="showSkillCategory('frameworks')">Frameworks, Databases, and Middleware</button>
-  </div>
+  <!-- Skills -->
+  <section id="skills" class="skills container my-5">
+    <h2>Skills</h2>
+    <div class="btn-group mb-4 d-flex justify-content-center" role="group">
+      <button class="btn btn-outline-primary" onclick="showSkillCategory('programming')">Programming Skills</button>
+      <button class="btn btn-outline-primary" onclick="showSkillCategory('frameworks')">Frameworks, Databases, and Middleware</button>
+    </div>
 
-  <!-- Programming Skills -->
-  <div id="programming" class="skill-category">
-    <h4>Programming Languages & SDLC</h4>
-    <div class="mb-3">
-      <label>HTML</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 70%;">70%</div>
-      </div>
+    <!-- Skill Categories (hidden by default) -->
+    <div id="programming" class="skill-category">
+      <!-- Include your skill bars as you had before -->
+      <!-- (same content you've already added for skill bars) -->
     </div>
-    <div class="mb-3">
-      <label>CSS</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" style="width: 70%;">70%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>JavaScript</label>
-      <div class="progress">
-        <div class="progress-bar bg-warning" style="width: 85%;">85%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>Java</label>
-      <div class="progress">
-        <div class="progress-bar bg-danger" style="width: 80%;">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>Python</label>
-      <div class="progress">
-        <div class="progress-bar bg-secondary" style="width: 75%;">75%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>Agile Software Development</label>
-      <div class="progress">
-        <div class="progress-bar bg-dark" style="width: 70%;">70%</div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Frameworks, DBs, Middleware -->
-  <div id="frameworks" class="skill-category" style="display: none;">
-    <h4>Frameworks, Databases & Middleware</h4>
-    <div class="mb-3">
-      <label>Django</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 75%;">75%</div>
-      </div>
+    <div id="frameworks" class="skill-category">
+      <!-- Include your frameworks skill bars -->
     </div>
-    <div class="mb-3">
-      <label>Express.js</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" style="width: 80%;">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>Spring Boot</label>
-      <div class="progress">
-        <div class="progress-bar bg-warning" style="width: 85%;">85%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>Next.js</label>
-      <div class="progress">
-        <div class="progress-bar bg-danger" style="width: 70%;">70%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>React</label>
-      <div class="progress">
-        <div class="progress-bar bg-primary" style="width: 80%;">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>WSO2 (ESB)</label>
-      <div class="progress">
-        <div class="progress-bar bg-secondary" style="width: 75%;">75%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>MongoDB</label>
-      <div class="progress">
-        <div class="progress-bar bg-dark" style="width: 80%;">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>PostgreSQL</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 85%;">85%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>MySQL</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" style="width: 80%;">80%</div>
-      </div>
-    </div>
-  </div>
-</section>
- <!-- experiance -->
-    <section class="experience container">
-        <h2>Experience a</h2>
-        <ul>
-            <li><i class="fas fa-briefcase"></i>System support Expert at Perago Information System ( june 2023 - september 2023)</li>
-            <li><i class="fas fa-briefcase"></i>Application administration and backend development officer At Goh Betoch Bank (september 2023 - present)</li>
-        </ul>
-    </section>
+  </section>
 
-    <section class="certificates container">
-        <h2>Certificate</h2>
-        <ul>
-            <li><strong>API and Web Service Certification</strong> - Issued by <em>Goh betoch Bank</em>, <em> March 2024</em></li>
-        </ul>
-          <ul>
-         <li><strong>Wso2 middleware and third party integration</strong> - Issued by <em>Goh betoch Bank</em>, <em> March 2024</em></li>
-        </ul>
-    </section>
- <!-- Hobbies & Interests -->
-    <section class="hobbies container">
-        <h2>Hobbies & Interests</h2>
-        <ul>
-            <li>Reading Technology Blogs</li>
-            <li>Travelling to New Places</li>
-            <li>Exploring New Projects</li>
-            <li>Playing Chess</li>
-            <li>Playing Football</li>
-        </ul>
-    </section>
+  <!-- Experience -->
+  <section id="experience" class="experience container">
+    <h2>Experience</h2>
+    <ul>
+      <li><i class="fas fa-briefcase"></i> System Support Expert – Perago Information System (Jun–Sep 2023)</li>
+      <li><i class="fas fa-briefcase"></i> Application Admin & Backend Developer – Goh Betoch Bank (Sep 2023–present)</li>
+    </ul>
+  </section>
 
-    <section class="projects container text-center">
-        <h2>Projects</h2>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Mobile Based Vaccination Management System for Children</h5>
-                        <p class="card-text">Children are vaccinated near their location...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card project-card">
-                    <img src="assets/card.png" class="card-img-top" alt="Foreign Currency Allocation">
-                    <div class="card-body">
-                        <h5 class="card-title">Foreign Currency Allocation for Importer</h5>
-                        <p class="card-text">Importers queue for getting Forex</p>
-                        <a href="https://github.com/soamisodoi012/fcyalllocation" class="btn btn-primary" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card project-card">
-                    <div class="card-body">python-Real-time-projects
-                        <h5 class="card-title">python for beginer</h5>
-                        <a href="https://github.com/soamisodoi012/python-Real-time-projects" class="btn btn-primary" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Human Resource Management System</h5>
-                        <p class="card-text">Managing human capital of the organization microservice based</p>
-                        <a href="https://github.com/soamisodoi012/hrm" class="btn btn-primary" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
+  <!-- Certificates -->
+  <section class="certificates container">
+    <h2>Certificates</h2>
+    <ul>
+      <li><strong>API and Web Service</strong> - Goh Betoch Bank, March 2024</li>
+      <li><strong>WSO2 Middleware Integration</strong> - Goh Betoch Bank, March 2024</li>
+    </ul>
+  </section>
+
+  <!-- Hobbies & Interests -->
+  <section class="hobbies container">
+    <h2>Hobbies & Interests</h2>
+    <div class="hobby-cards">
+      <div class="hobby-card">
+        <i class="fas fa-book-reader"></i>
+        <p>Reading Technology Blogs</p>
+      </div>
+      <div class="hobby-card">
+        <i class="fas fa-plane-departure"></i>
+        <p>Travelling to New Places</p>
+      </div>
+      <div class="hobby-card">
+        <i class="fas fa-code"></i>
+        <p>Exploring New Projects</p>
+      </div>
+      <div class="hobby-card">
+        <i class="fas fa-chess-knight"></i>
+        <p>Playing Chess</p>
+      </div>
+      <div class="hobby-card">
+        <i class="fas fa-futbol"></i>
+        <p>Playing Football</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects container text-center">
+    <h2>Projects</h2>
+    <div class="row mt-4">
+      <!-- Repeat this block for each project -->
+      <div class="col-md-4">
+        <div class="card project-card">
+          <div class="card-body">
+            <h5 class="card-title">Mobile Based Vaccination System</h5>
+            <p class="card-text">Children are vaccinated near their location...</p>
+          </div>
         </div>
-    </section>
+      </div>
+      <!-- Other project cards... -->
+    </div>
+  </section>
 
-    <section class="container my-5">
-        <h2 class="text-center">Contact Me</h2>
-        <form id="contact-form" onsubmit="redirectToEmail(); return false;">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
- <!-- adderess -->
-        <div class="text-center mt-4">
-            <a href="https://www.linkedin.com/in/dejenie-derese" target="_blank" class="btn btn-outline-secondary">
-                <i class="fab fa-linkedin"></i>
-                LinkedIn
-            </a>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="container my-5">
+    <h2 class="text-center">Contact Me</h2>
+    <form id="contact-form" onsubmit="redirectToEmail(); return false;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" class="form-control" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
 
-    <footer>
-        <p>&copy; 2025 My portfolio</p>
-    </footer>
+    <!-- Social -->
+    <div class="text-center mt-4">
+      <a href="https://www.linkedin.com/in/dejenie-derese" target="_blank" class="btn btn-outline-secondary">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Portfolio</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
 </body>
+
 </html>
