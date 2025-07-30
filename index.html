@@ -3,79 +3,183 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  
+  <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav>
-    <a href="#profile">Profile</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#profile">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Header -->
-  <header class="text-center">
+  <header class="text-center py-5 bg-light">
     <div class="container">
       <h1>My Portfolio</h1>
       <p>Welcome to my portfolio website!</p>
     </div>
   </header>
 
-  <!-- Profile / About Section -->
-  <section id="profile" class="profile">
-    <img src="assets/djd.jpg" alt="Profile Picture" />
+  <!-- Profile Section -->
+  <section id="profile" class="profile text-center py-5">
+    <img src="assets/djd.jpg" alt="Profile Picture" class="rounded-circle mb-3" width="150" height="150" />
     <h2>Dejenie Derese Mitiku</h2>
-    <p>
-      Hi there! I am a Backend developer with a strong foundation in
-      programming, frameworks, and middleware. With expertise in various
-      programming languages and a deep understanding of software development
-      principles, I have a proven ability to design, develop, and deploy
-      high-quality products.
+    <p class="mx-auto" style="max-width: 600px;">
+      Hi there! I am a Backend developer with a strong foundation in programming, frameworks, and middleware.
+      With expertise in various programming languages and a deep understanding of software development principles,
+      I have a proven ability to design, develop, and deploy high-quality products.
     </p>
-    <div class="text-center mt-3">
-      <a href="assets/dejenie-derese-cv.pdf" class="btn btn-success" download>
-        <i class="fas fa-download"></i> Download My CV
-      </a>
-    </div>
+    <a href="assets/dejenie-derese-cv.pdf" class="btn btn-success" download>
+      <i class="fas fa-download"></i> Download My CV
+    </a>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="education container">
+  <!-- Education Section -->
+  <section id="education" class="education container py-5">
     <h2>Education</h2>
     <ul>
       <li>Bachelor of Science in Information Technology - Woldia University</li>
     </ul>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="skills container my-5">
-    <h2>Skills</h2>
-    <div class="btn-group mb-4 d-flex justify-content-center" role="group">
-      <button class="btn btn-outline-primary" onclick="showSkillCategory('programming')">Programming Skills</button>
-      <button class="btn btn-outline-primary" onclick="showSkillCategory('frameworks')">Frameworks, Databases, and Middleware</button>
+  <!-- Skills Section -->
+  <section id="skills" class="skills container py-5">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div class="btn-group mb-4 d-flex justify-content-center" role="group" aria-label="Skill category buttons">
+      <button type="button" class="btn btn-outline-primary" onclick="showSkillCategory('programming')">Programming Skills</button>
+      <button type="button" class="btn btn-outline-primary" onclick="showSkillCategory('frameworks')">Frameworks, Databases, and Middleware</button>
     </div>
 
-    <!-- Skill Categories (hidden by default) -->
+    <!-- Programming Skills -->
     <div id="programming" class="skill-category">
-      <!-- Include your skill bars as you had before -->
-      <!-- (same content you've already added for skill bars) -->
+      <h4>Programming Languages & SDLC</h4>
+
+      <div class="mb-3">
+        <label>HTML</label>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>CSS</label>
+        <div class="progress">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>JavaScript</label>
+        <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Java</label>
+        <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Python</label>
+        <div class="progress">
+          <div class="progress-bar bg-secondary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Agile Software Development</label>
+        <div class="progress">
+          <div class="progress-bar bg-dark" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
     </div>
 
-    <div id="frameworks" class="skill-category">
-      <!-- Include your frameworks skill bars -->
+    <!-- Frameworks, Databases, Middleware -->
+    <div id="frameworks" class="skill-category" style="display: none;">
+      <h4>Frameworks, Databases & Middleware</h4>
+      <div class="mb-3">
+        <label>Django</label>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Express.js</label>
+        <div class="progress">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Spring Boot</label>
+        <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Next.js</label>
+        <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>React</label>
+        <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>WSO2 (ESB)</label>
+        <div class="progress">
+          <div class="progress-bar bg-secondary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>MongoDB</label>
+        <div class="progress">
+          <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>PostgreSQL</label>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>MySQL</label>
+        <div class="progress">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="experience container">
+  <!-- Experience Section -->
+  <section id="experience" class="experience container py-5">
     <h2>Experience</h2>
     <ul>
       <li><i class="fas fa-briefcase"></i> System Support Expert – Perago Information System (Jun–Sep 2023)</li>
@@ -83,8 +187,8 @@
     </ul>
   </section>
 
-  <!-- Certificates -->
-  <section class="certificates container">
+  <!-- Certificates Section -->
+  <section class="certificates container py-5">
     <h2>Certificates</h2>
     <ul>
       <li><strong>API and Web Service</strong> - Goh Betoch Bank, March 2024</li>
@@ -92,70 +196,94 @@
     </ul>
   </section>
 
-  <!-- Hobbies & Interests -->
-  <section class="hobbies container">
+  <!-- Hobbies Section -->
+  <section class="hobbies container py-5">
     <h2>Hobbies & Interests</h2>
-    <div class="hobby-cards">
-      <div class="hobby-card">
-        <i class="fas fa-book-reader"></i>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <div class="text-center hobby-card p-3 border rounded">
+        <i class="fas fa-book-reader fa-2x mb-2"></i>
         <p>Reading Technology Blogs</p>
       </div>
-      <div class="hobby-card">
-        <i class="fas fa-plane-departure"></i>
+      <div class="text-center hobby-card p-3 border rounded">
+        <i class="fas fa-plane-departure fa-2x mb-2"></i>
         <p>Travelling to New Places</p>
       </div>
-      <div class="hobby-card">
-        <i class="fas fa-code"></i>
+      <div class="text-center hobby-card p-3 border rounded">
+        <i class="fas fa-code fa-2x mb-2"></i>
         <p>Exploring New Projects</p>
       </div>
-      <div class="hobby-card">
-        <i class="fas fa-chess-knight"></i>
+      <div class="text-center hobby-card p-3 border rounded">
+        <i class="fas fa-chess-knight fa-2x mb-2"></i>
         <p>Playing Chess</p>
       </div>
-      <div class="hobby-card">
-        <i class="fas fa-futbol"></i>
+      <div class="text-center hobby-card p-3 border rounded">
+        <i class="fas fa-futbol fa-2x mb-2"></i>
         <p>Playing Football</p>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="projects container text-center">
+  <!-- Projects Section -->
+  <section id="projects" class="projects container text-center py-5">
     <h2>Projects</h2>
     <div class="row mt-4">
-      <!-- Repeat this block for each project -->
-      <div class="col-md-4">
-        <div class="card project-card">
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100">
           <div class="card-body">
             <h5 class="card-title">Mobile Based Vaccination System</h5>
             <p class="card-text">Children are vaccinated near their location...</p>
           </div>
         </div>
       </div>
-      <!-- Other project cards... -->
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100">
+          <img src="assets/card.png" class="card-img-top" alt="Foreign Currency Allocation" />
+          <div class="card-body">
+            <h5 class="card-title">Foreign Currency Allocation for Importer</h5>
+            <p class="card-text">Importers queue for getting Forex</p>
+            <a href="https://github.com/soamisodoi012/fcyalllocation" target="_blank" class="btn btn-primary">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Python for Beginner</h5>
+            <a href="https://github.com/soamisodoi012/python-Real-time-projects" target="_blank" class="btn btn-primary">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Human Resource Management System</h5>
+            <p class="card-text">Managing human capital of the organization microservice based</p>
+            <a href="https://github.com/soamisodoi012/hrm" target="_blank" class="btn btn-primary">View on GitHub</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="container my-5">
-    <h2 class="text-center">Contact Me</h2>
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5">
+    <h2 class="text-center mb-4">Contact Me</h2>
     <form id="contact-form" onsubmit="redirectToEmail(); return false;">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" id="name" class="form-control" required />
+        <input type="text" id="name" class="form-control" placeholder="Your Name" required />
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" id="email" class="form-control" required />
+        <input type="email" id="email" class="form-control" placeholder="Your Email" required />
       </div>
       <div class="mb-3">
         <label for="message" class="form-label">Message</label>
-        <textarea id="message" class="form-control" rows="5" required></textarea>
+        <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Send</button>
     </form>
 
-    <!-- Social -->
     <div class="text-center mt-4">
       <a href="https://www.linkedin.com/in/dejenie-derese" target="_blank" class="btn btn-outline-secondary">
         <i class="fab fa-linkedin"></i> LinkedIn
@@ -164,11 +292,14 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 My Portfolio</p>
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 My Portfolio</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
   <script src="js/script.js"></script>
 </body>
 
