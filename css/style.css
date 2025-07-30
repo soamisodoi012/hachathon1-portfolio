@@ -1,40 +1,45 @@
-
+/* === General Styles === */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
 }
 
+/* === Header/Navbar === */
 header {
     background-color: #0c161f;
     color: #fff;
     padding: 20px 0;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #0c161f;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #198754;
+    border-radius: 5px;
+}
+
 header h1 {
     margin: 0;
-}
-
-.projects {
-    padding: 50px 0;
-}
-
-.project-card {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #343a40;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
 }
 
-.error-message {
-    color: red;
-    font-size: 0.9rem;
-    display: none;
-}
-
+/* === Profile Section === */
 .profile {
     padding: 30px 0;
     text-align: center;
@@ -46,45 +51,200 @@ footer {
     height: 150px;
 }
 
-.skills, .education, .experience, .awards, .hobbies {
-    padding: 20px 0;
+/* === About Section === */
+.about {
+    padding: 30px 15%;
 }
 
-.skills ul, .education ul, .experience ul, .awards ul, .hobbies ul {
+.about p {
+    padding: 0 20px;
+}
+
+/* === Skills Section === */
+.skills {
+    background-color: #f5f5f5;
+    padding: 40px 10%;
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skill-category ul {
     list-style-type: none;
     padding: 0;
 }
 
-.skills ul li, .education ul li, .experience ul li, .awards ul li, .hobbies ul li {
-    margin: 10px 0;
+.skill-category li {
+    margin: 15px 0;
     display: flex;
     align-items: center;
 }
 
-.skills ul li i, .experience ul li i {
+.skill-category li i {
     margin-right: 10px;
 }
 
-.skills h2, .hobbies h2, .experience h2, .education h2 {
+/* === Progress Bars === */
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 20px;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.progress-bar {
+    background-color: #198754;
+    height: 100%;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+/* === Education Section === */
+.education {
+    background-color: #d1e7f7;
+    padding: 40px 10%;
+}
+
+.education h2 {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* === Experience Section === */
+.experience {
+    background-color: #e9f7f5;
+    padding: 40px 10%;
+}
+
+.experience h2 {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* === Awards Section === */
+.awards {
+    padding: 40px 10%;
+}
+
+.awards h2 {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* === Projects Section === */
+.projects {
+    padding: 50px 10%;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
     color: green;
 }
 
-.experience, .skills, .education {
-    background-color: #f4f4f4;
+.project-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.experience {
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === Hobbies Section === */
+.hobbies {
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+}
+
+.hobbies h2 {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hobby-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hobby-card {
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hobby-card i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #198754;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
     background-color: #e9f7f5;
 }
 
-.skills {
-    background-color: #f5f5f5;
+/* === Footer === */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
 
-.education {
-    background-color: #d1e7f7;
+/* === Download Button === */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #198754;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #157347;
+}
+
+/* === Utility === */
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
 .skill-category {
     display: none;
+}
+
+.skill-category.active {
+    display: block;
 }
