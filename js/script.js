@@ -10,9 +10,13 @@ function redirectToEmail() {
     window.location.href = `mailto:soamisodoi012@gmail.com?subject=${subject}&body=${body}`;
 }
 
+// function showSkillCategory(category) {
+//     const categories = document.querySelectorAll('.skill-category');
+//     categories.forEach(cat => cat.style.display = 'none');
+//     document.getElementById(category).style.display = 'block';
+// }
 function showSkillCategory(category) {
-    const categories = document.querySelectorAll('.skill-category');
-    categories.forEach(cat => cat.style.display = 'none');
+    document.querySelectorAll('.skill-category').forEach(el => el.style.display = 'none');
     document.getElementById(category).style.display = 'block';
 }
 
