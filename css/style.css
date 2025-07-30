@@ -184,6 +184,22 @@ header p {
     padding: 40px 10%;
     background-color: #f9f9f9;
 }
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-left 5s linear infinite;
+  color: #00d1b2; /* optional: makes it stand out */
+  font-weight: bold;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .hobbies h2 {
     color: green;
